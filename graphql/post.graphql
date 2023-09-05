@@ -1,12 +1,13 @@
 type Query{
-  
+
   posts: [Post!]! @all
-  post(id: ID @req): Post @find
+  # post(id: ID @req): Post @find
 }
 
 type Post{
-  id:ID
-  title:String
-  content:String
-  author: User! @belongsTo
+  id:ID!
+  title:String!
+  content:String!
+  author: User
+
 }
